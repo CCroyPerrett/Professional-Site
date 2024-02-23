@@ -1,0 +1,50 @@
+<!--Impliments Local Javascript file-->
+<script src="driver.js" DEFER></script>
+
+<canvas id="canvas" style="border:3px solid #000000;" width=500 height=500
+onmousemove="mouse_coords()" onclick="set_point()" oncontextmenu="clear_segment()"></canvas>
+
+<br> Number of Rotations (N): <input type="text" id="n" value="3" size="4"><br>
+<!--Y Rotation: <input type="range" min="0" max="360"  value="0" input id="yrotation" onmousemove="xySOR()"> <p id="rdis"></p>-->
+Rotation: <input type="range" min="0" max="360"  value="30" input id="xrotation" onmousemove="xySOR()"><br>
+Draw End Caps: <input type="checkbox" id="end" onclick="toggle_end()">
+<br> Color: 
+red:<input type="range" id="red" value="0" min="0" max="255" onmousemove="xySOR()"> 
+green:<input type="range" id="green" value="100" min="0" max="255" onmousemove="xySOR()">
+blue:<input type="range" id="blue" value="200" min="0" max="255" onmousemove="xySOR()"> 
+<br><button id="crsu" onclick="SOR()">Create Surface of Rotation</button>
+<br><br><button id="finish" onclick="Finish()">Insert SOR into World</button><br><br>
+
+<canvas id="world" style="border:3px solid #000000;" width=500 height=500
+ onmousedown="SelectClosestObj()" onmouseup="MouseLeaveWorld()"
+onmousemove="MoveSelObj()" onmousewheel=""></canvas><br>
+Shading Options: Wireframe: <input type="checkbox" id="wireframe" onclick="toggle_wire()">, 
+Gourand Shading: <input type="checkbox" id="gouraud" onclick="toggle_gourand()">, 
+Flat Shading: <input type="checkbox" checked id="flat" onclick="toggle_flat()"><br>
+<!--Enable Phong Shading: <input type="checkbox" id="phong" onclick=""><br>-->
+
+Lighting: Directional: <input type="checkbox" checked id="directional" onclick="toggle_directional()">, Point: <input type="checkbox" id="point" onclick="toggle_point()">,
+Ambient <input type="checkbox" id="ambient" onclick="toggle_ambient()">, Specular <input type="checkbox" id="specular" checked onclick="toggle_specular()"><br>
+Select Object To Transform 
+(first object inserted into world is 0, second is 1, etc): 
+<input type="text" value="0" id="transselect" onblur="updateInputs()">
+<br>
+Scale Selected Obj: 
+x:<input type="range" min="0.05" max="1" step="0.05" value="0.5" input id="xscale" onmousemove="ChangeScale()">, 
+y:<input type="range" min="0.05" max="1" step="0.05" value="0.5" input id="yscale" onmousemove="ChangeScale()">
+z:<input type="range" min="0.05" max="1" step="0.05" value="0.5" input id="zscale" onmousemove="ChangeScale()">
+<br>
+Rotate Selected Obj: 
+x:<input type="range" min="0" max="360" step="1" value="0" input id="xrota" onmousemove="ChangeRota()">, 
+y:<input type="range" min="0" max="360" step="1" value="0" input id="yrota" onmousemove="ChangeRota()">,
+z:<input type="range" min="0" max="360" step="1" value="0" input id="zrota" onmousemove="ChangeRota()">
+<br>
+Translate Selected Obj: 
+x:<input type="range" min="-1.5" max="1.5" step="0.025" value="0" input id="xtrans" onmousemove="ChangeTrans()">, 
+y:<input type="range" min="-1.5" max="1.5" step="0.025" value="0" input id="ytrans" onmousemove="ChangeTrans()">,
+z:<input type="range" min="-1.5" max="1.5" step="0.025" value="0" input id="ztrans" onmousemove="ChangeTrans()">
+<br>
+Move Point Lighting: 
+x:<input type="range" min="-1" max="1" step="0.025" value="-0.75" input id="xpoint" onmousemove="ChangePoint()">, 
+y:<input type="range" min="-1" max="1" step="0.025" value="0.75" input id="ypoint" onmousemove="ChangePoint()">,
+z:<input type="range" min="-1" max="1" step="0.025" value="1" input id="zpoint" onmousemove="ChangePoint()">

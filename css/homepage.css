@@ -1,0 +1,27 @@
+/* this css file will only style the homepage of our site */
+
+.cat-photo {
+  margin: 10px;
+  max-width: 500px;
+}
+
+#my-portrait {
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid rgb(143, 78, 212);
+}  
+
+p{
+}
+#big-tite{
+  font-size: x-large;
+  text-align: center;
+}
+
+.horiz{
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+}

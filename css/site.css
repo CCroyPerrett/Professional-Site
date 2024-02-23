@@ -1,0 +1,88 @@
+
+body {
+  border: solid 10px rgb(143, 78, 212);
+  background-color: rgb(172, 219, 255);
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+#input-output {
+  border: solid 5px rgb(13, 71, 179);
+  padding: 5px;
+}
+#map {
+  padding: 10px;
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#timeChart{
+  border: solid 5px rgb(13, 71, 179);
+}
+
+body.party {
+  background-color: #ffee00;
+  border: dotted 5px rgb(25, 67, 255);
+  animation: marching-ants 2s infinite linear;
+}
+
+/* animate the marching ants border */
+@keyframes marching-ants {
+  0% {
+    border-width: 5px;
+  }
+  50% {
+    border-width: 10px;
+  }
+  100% {
+    border-width: 5px;
+  }
+}
+
+
+body.party button.highlight-button {
+  background-color: #ccffcd;
+  border: solid 1px #1900ff;
+  color: #1900ff;
+}
+
+body.party h1 {
+  color: papayawhip;
+}
+
+body.party {
+  color: white;
+}
+
+body.party h2 {
+  color: #1900ff;
+}
+
+/* create a red, dotted, 30px border */
+body.party {
+  background-color: #ffdf28;
+  outline: dotted 30px rgb(25, 67, 255);
+  outline-offset: -15px;
+  animation: border 2s infinite linear;
+}
+
+/* animate the border so it shrinks to 0px and grows bacck to 30px
+   maintaining an offset of half its width */
+@keyframes border {
+  0% {
+    outline-width: 30px;
+    outline-offset: -15px;
+  }
+  50% {
+    outline-width: 50px;
+    outline-offset: -25px;
+  }
+  100% {
+    outline-width: 30px;
+    outline-offset: -15px;
+  }
+}   
