@@ -1,0 +1,27 @@
+    Same as before, one may generate the object of rotation
+    by left-clicking the top canvas, and finish on a right-click. One one is done designing the curve, they may generate the SOR
+    with the "Create Surface of Rotation" button. 
+    
+    The SOR is no longer a simple wireframe, although that option can still be selected with the "Enable Wireframe Rendering"
+    toggle. The color of the SOR can be customized in the given sliders boxes, with the amount of red, green, and blue used for
+    the base color able to be chosen from 0 to 255 for their respective hex values. All 0's (leftmost) is pure black 
+    (with no shading beyond pitch black visible), and all 255's (rightmost) is all white. The SOR in the upper canvas can be rotated slightly
+    for greater context.
+    
+    Once the SOR has been generated and the color selected, an instance of the SOR may be inserted into the lower "world" canvas 
+    through the usage of the "Insert SOR into World" button, at default positioning and a smaller scale. Using the sliders below,
+    the object may be fully transformed, (scaled, rotated & transformed) along the canvas. New instances with potentially different
+    colors may be created by clicking the same aformentioned button. In the case of multiple objects existing
+    at once, they may be selected by typing in their ordering value in the textbox (first object inserted has a value of 0,
+    second has a value of 1, etc). Sliders will automatically adjust to represents a newly selected object's current value.
+
+    Alternativley, one may click the canvas to select the closest SOR (if one clicks close enough to it's orogion),
+    and move it around while holding down left click. This adjustment is worth 10 extra credit points from the bonus section.<br>
+
+    Note: Rendering is more unstable in the upper "example" canvas than the lower "world"
+    canvas. Please consider the functionality and appearances of the lower canvas for the purposes of grading, which is fully functional.
+    The upper is more of a bonus example to give the user greater context on the object before fully implimenting it in the second canvas.
+
+    Note2: Dear graders, I would very much like to enter the contest for scenes created with our implimentations of this program!
+    I will be entering the minimalist human I have created, a photo of which can be seen within the "CSE160 prog2-3.PNG" image 
+    available from the photos folder. Thank you very much!
